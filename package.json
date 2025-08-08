@@ -1,0 +1,19 @@
+{
+  "name": "neon-bike-3d",
+  "version": "1.0.0",
+  "description": "3D Neon Bike Racing Game",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Build complete'",
+    "build:android": "npx cap build android",
+    "sync:android": "npx cap sync android",
+    "open:android": "npx cap open android"
+  },
+  "keywords": ["game", "3d", "racing", "bike"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@capacitor/cli": "^5.0.0",
+    "@capacitor/android": "^5.0.0"
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Bike 3D - Extreme Racing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Game Container -->
+    <div id="gameContainer" tabindex="0">
+        <!-- Start Menu -->
+        <div id="startMenu" class="menu-screen">
+            <div class="menu-content">
+                <h1 class="game-title">NEON BIKE 3D</h1>
+                <div class="subtitle">Extreme Racing Adventure</div>
+                <button id="startButton" class="neon-button">START GAME</button>
+                <button id="instructionsButton" class="neon-button secondary">INSTRUCTIONS</button>
+                <div class="controls-info">
+                    <p>🎮 Use WASD or Arrow Keys to control</p>
+                    <p>🚀 Space to jump / boost</p>
+                    <p>🎯 Collect power-ups for points</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions Modal -->
+        <div id="instructionsModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>How to Play</h2>
+                <div class="instructions">
+                    <p><strong>Movement:</strong> WASD or Arrow Keys</p>
+                    <p><strong>Jump/Boost:</strong> Spacebar</p>
+                    <p><strong>Objective:</strong> Travel as far as possible while avoiding obstacles</p>
+                    <p><strong>Scoring:</strong> Distance + Stunts + Power-ups</p>
+                </div>
+                <button id="closeInstructions" class="neon-button">Got it!</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="menu-screen hidden">
+            <div class="menu-content">
+                <h2 class="game-over-title">GAME OVER</h2>
+                <div class="score-display">
+                    <div class="final-score">Final Score: <span id="finalScore">0</span></div>
+                    <div class="distance">Distance: <span id="finalDistance">0</span>m</div>
+                    <div class="stunts">Stunts: <span id="finalStunts">0</span></div>
+                </div>
+                <button id="restartButton" class="neon-button">PLAY AGAIN</button>
+                <button id="backToMenuButton" class="neon-button secondary">MAIN MENU</button>
+            </div>
+        </div>
+
+        <!-- HUD -->
+        <div id="hud" class="hud hidden">
+            <div class="hud-top">
+                <div class="score">Score: <span id="currentScore">0</span></div>
+                <div class="distance">Distance: <span id="currentDistance">0</span>m</div>
+                <div class="speed">Speed: <span id="currentSpeed">0</span> km/h</div>
+            </div>
+            <div class="hud-bottom">
+                <div class="stunts">Stunts: <span id="currentStunts">0</span></div>
+                <div class="health">Health: <span id="currentHealth">100</span>%</div>
+            </div>
+        </div>
+
+        <!-- Pause Menu -->
+        <div id="pauseMenu" class="menu-screen hidden">
+            <div class="menu-content">
+                <h2>PAUSED</h2>
+                <button id="resumeButton" class="neon-button">RESUME</button>
+                <button id="pauseRestartButton" class="neon-button secondary">RESTART</button>
+                <button id="pauseMenuButton" class="neon-button secondary">MAIN MENU</button>
+            </div>
+        </div>
+
+        <!-- Canvas Container -->
+        <div id="canvasContainer"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="audio.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

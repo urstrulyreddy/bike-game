@@ -1,0 +1,8 @@
+{
+  "appId": "com.neonbike.game",
+  "appName": "Neon Bike 3D",
+  "webDir": ".",
+  "server": {
+    "androidScheme": "https"
+  }
+}

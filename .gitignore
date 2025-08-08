@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+*.log
+.capacitor/
+android/
+build/
+dist/
+.bundle/
